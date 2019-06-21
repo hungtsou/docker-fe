@@ -4,4 +4,4 @@ services:
 before_install:
   - docker build -t hungt/docker-fe -f Dockerfile.dev .
 script:
-  - docker run hungt/docker-fe npm run test --watchAll=false
+  - docker run hungt/docker-fe npm run test -- --watchAll=false
