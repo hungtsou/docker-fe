@@ -1,0 +1,7 @@
+sudo: required
+services:
+  - docker
+before_install:
+  - docker build -t hungt/docker-fe -f Dockerfile.dev .
+script:
+  - docker run hungt/docker-fe npm run test -- --coverage
